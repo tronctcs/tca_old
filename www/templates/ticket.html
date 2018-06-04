@@ -1,0 +1,89 @@
+<div class="bar bar-header header">
+<img class="home-bar-image" src="img/logo-1-small.png" />
+  <div class="h1 title" style="color:white;">INCIDENTS DETAILS</div>
+  <!-- <button class="button button-clear button-primary" style="color:white; float: right;" alt="logout" ng-click="logout()"><img src="/img/logout.png"></button> -->
+  <button class="button button-clear button-primary" style="color:white; float: right;" alt="logout" ng-click="logout()">Logout</button>
+</div>
+<ion-view view-title="Incident Details" >
+  <ion-content style="margin-top: 40px;">
+  
+    <div class="IncId">
+      {{incident.IncId}} <button class="button  small_button" style="float: right;" ng-click="claim(incident.IncId)" target="_self">
+            Claim</button>
+    </div>
+    <div class="IncId-details">
+      <label class="heading">Title:</label>
+      <span class="IncId-title">{{incident.Title}}</span>
+    </div>
+    <div>
+      <label class="heading"> Description:</label>
+      <span class="IncId-title">{{incident.Decs}}</span>
+    </div>
+    <div>
+      <label class="heading"> Priority:</label>
+      <span class="IncId-title">{{incident.Priority}}</span>
+    </div>
+     <div>
+      <label class="heading"> AssignedGroup:</label>
+      <span class="IncId-title">{{incident.AssignedGroup}}</span>
+    </div>
+     <div>
+      <label class="heading"> Urgency:</label>
+      <span class="IncId-title">{{incident.Urgency}}</span>
+    </div>
+    <div>
+      <label class="heading"> Created On:</label>
+      <span class="IncId-title">{{incident.CreatedOn}}</span>
+    </div>
+    <div>
+      <label class="heading"> Created By:</label>
+      <span class="IncId-title">{{incident.CreatedUpdatedBy}}</span>
+    </div>
+    <div>
+      <label class="heading"> Source:</label>
+      <span class="IncId-title">{{incident.Source}}</span>
+    </div>
+    <div>
+      <label class="heading"> Status:</label>
+      <span class="IncId-title">{{incident.Status}}</span>
+    </div>
+   
+    <div>
+      <label class="heading"></label>
+      <span class="IncId-title"></span>
+    </div>
+    <!-- <h4>
+    <label>Title:</label>
+     <span>{{incident.Title}}</span></h4>
+
+     <h4><label>Description:</label>
+     <span> {{incident.Decs}}</span></h4>
+
+     <h4><label>Created On:</label>
+     <span>{{incident.CreatedOn}}</span></h4>
+
+     <h4><label>Assigned Group:</label>
+     <span>{{incident.AssignedGroup}}</span></h4>
+
+     <h4><label>Source:</label>
+     <span>{{incident.Source}}</span></h4>
+
+      <h4><label>Urgency:</label>
+     <span>{{incident.Urgency}}</span></h4> -->
+     <!-- <p> {{incident.Desc}}</p>
+     <p> {{incident.Status}}</p>
+     <p> {{incident.CreatedOn}}</p>
+     <p> {{incident.CreatedUpdatedBy}}</p>
+     <p> {{incident.AssignedGroup}}</p>
+     <p> {{incident.Source}}</p>
+     <p> {{incident.Urgency}}</p> -->
+    
+       <!-- <button class="button  small_button" style="float: left;background-color: #000814; color: white;" ng-controller="HomeCtrl" ng-click="HomeCtrl.claim(incident.IncId)" target="#/home">Claim</button> -->
+  </ion-content>
+
+<div class="bar bar-footer ">
+   <!-- <h2><i class="icon ion-arrow-left-a"></i><a class="title" href="#/home"> Back</a></h2> -->
+   <!-- <button class="button claim_button" style="float: left;" ng-controller="HomeCtrl" ng-click="HomeCtrl.claim(incident.IncId)" target="#/home"><h3 style="color: white;">Claim</h3></button> -->
+  <h1 class="back"><a href="#/home"><img src="img/arrow-back.png" /></i></a></h1>
+</div>
+</ion-view>

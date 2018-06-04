@@ -1,0 +1,49 @@
+<ion-modal-view style="background-color: white;">
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h3 style="margin-left: 50px; margin-top: 5px; color: white;">Register</h3>
+          <button class="button button-clear button-primary" style="color:white; margin-left: 120px;" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Tronc Mail Id" ng-model="user.UserMail">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="user.setpassword">
+          </label>
+          <!-- <label class="item item-input">
+              <input type="text"  placeholder="Phone Number" ng-model="user.phoneNumber">
+          </label> -->
+          <!--<label class="item item-input">
+              <input type="text"  placeholder="Enter Assigned Group" ng-model="user.group">
+          </label>-->
+          <label class = "item item-input item-select">
+             <div class = "input-label">
+                Select Group
+             </div>
+            <!-- <select ng-model="user.usergroup">
+                <option>SM-APP-BI</option>
+                <option selected>TCS-APP-BI</option>
+                <option>WINTEL</option>
+             </select>-->
+             <!--<select multiple ng-model='usergroup'
+                    ng-options="a.name for a in values" >
+              </select>
+              <select multiple="multiple">
+                    <option ng-repeat="group in groups" value="{{}}">{{group}}</option>
+               </select>
+        
+            {{usergroup}}
+          </label>-->
+      </div>
+      <ion-multiple-select title="Select Groups" template-url="templates/multipleSelect.html" options="groups" key-property="Id" value-property="Name" selected-property="Selected" class="item item-input item-icon-right" render-checkbox="false" animation="slide-in-left">
+            <div class="input-label">
+              Group
+            </div>
+            <i class="icon ion-android-arrow-dropdown"></i>
+          </ion-multiple-select>
+          <textarea class="padding" disabled="disabled" >{{ getOptionsSelected(groups, 'Name', 'Selected') }}</textarea>
+      <button class="button button-block button-calm" ng-click="register()">Register</button>
+  </ion-content>
+
+</ion-modal-view>

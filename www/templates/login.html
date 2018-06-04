@@ -1,0 +1,27 @@
+<!-- <div class="bar bar-header header">
+  <div class="h1 title" style="color:white;">Ticket Claim Application</div>
+</div> -->
+<ion-view view-title="Login" name="login-view" style="background-image: url(img/login_bg.png)">
+  <ion-content class="padding" style="margin-top: 10%">
+  <img class="logo_image" src="img/logo.png"  />
+  <div class="welcome">Welcome to </div>
+  <div class="tca_welcome">TICKET CLAIM APPLICATION</div>
+              <img class="username_image" src="img/username.png">
+              <input type="text" class="userid" placeholder="Tronc User Id" ng-model="user.userid" autocomplete="off">
+              <img class="password_image" src="img/password.png">
+              <input type="password" class="password" placeholder="Password(Cloud Plus)" ng-model="user.password" autocomplete="off">
+              <input type="text" class="domain" placeholder="usa.tribune.com" ng-disabled="true">
+      <!-- <div class="list list-inset">
+          <div class="userid">
+              <input type="text" placeholder="Tronc User Id" ng-model="user.userid">
+          </div>
+          <label class="item item-input">
+              <input type="password" placeholder="Password(Cloud Plus)" ng-model="user.password">
+          </label>
+          <label class="item item-input">
+              <input type="text"  placeholder="usa.tribune.com" ng-disabled="true">
+          </label>
+      </div> -->
+      <button class="button button-block login_button" ng-click="login()">Login</button>
+  </ion-content>
+</ion-view>

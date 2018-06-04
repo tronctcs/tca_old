@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "86467201781",
+    "firebase_url": "https://newtcaapp.firebaseio.com",
+    "project_id": "newtcaapp",
+    "storage_bucket": "newtcaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86467201781:android:bd57307675a4a32b",
+        "android_client_info": {
+          "package_name": "com.tcs.tca.tcsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86467201781-si6bqfroe0mo3q4b4klqh9sgs6uij928.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "86467201781-si6bqfroe0mo3q4b4klqh9sgs6uij928.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABAbxl2LSTz1vA1HriEvCDz-BBty5eIJc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

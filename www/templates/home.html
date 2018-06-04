@@ -1,0 +1,44 @@
+<div class="bar bar-header header">
+<img class="home-bar-image" src="img/logo-1-small.png" />
+  <div class="h1 title" style="color:white;">INCIDENTS</div>
+  <!-- <button class="button button-clear button-primary" style="color:white; float: right;" ng-click="logout()"><img src="/img/logout.png"></button> -->
+  <button class="button button-clear button-primary" style="color:white; float: right;" alt="logout" ng-click="logout()">Logout</button>
+</div>
+ <ion-view view-title="INCIDENTS" >
+  <ion-content class="incident_content" >
+   <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+  <ion-list>
+    <ion-item ng-repeat="item in items"></ion-item>
+  </ion-list>
+    <ion-list ng-cloak>
+      <ion-item class="item-remove-animate item-icon-right incident-list" ng-repeat="incident in incidents" type="item-text-wrap">
+      <div class="ticket">
+        <div class="priority_list"  ng-class="{
+        'color-p1': incident.Priority === 'P1', 
+        'color-p2': incident.Priority === 'P2', 
+        'color-p3': incident.Priority === 'P3',
+        'color-p4': incident.Priority === 'P4'}"><div class="priority">{{incident.Priority}}</div></div>
+        <div class="incident-IncId">{{incident.IncId}}
+        <!-- <a style="float: right; margin-right: 100px;font-weight: 900;">{{incident.Priority}}</a> --></div>
+        <div class="incident-title"><p style="text-overflow: ellipsis;">{{incident.Title}}</p></div>
+          <div>
+          <button class=" claimButton" style="float: right;" ng-click="claim(incident.IncId)" target="_self">
+            <!-- <i>Claim</i> -->
+            <img src="img/claim-icon.png"/>
+          </button>
+          </div>
+      </div> 
+        
+        <button class=" detail-button" ng-controller="TicketCtrl" ng-click="viewDetails(incident.Id)"><img src="img/arrow-next.png" /></button> 
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+       
+      </ion-item>
+    </ion-list> 
+     <ion-pane ng-show="incidents.length === 0 && loaded">
+        <p align="center"> No incidents available </p>
+     </ion-pane>
+  </ion-content>
+</ion-view>
